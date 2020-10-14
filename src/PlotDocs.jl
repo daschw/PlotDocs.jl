@@ -211,7 +211,14 @@ const ATTRIBUTE_TEXTS = Dict(
     :Series => "These attributes apply to individual series (lines, scatters, heatmaps, etc)",
     :Plot => "These attributes apply to the full Plot. (A Plot contains a tree-like layout of Subplots)",
     :Subplot => "These attributes apply to settings for individual Subplots.",
-    :Axis => "These attributes apply to an individual Axis in a Subplot (for example the `subplot[:xaxis]`)",
+    :Axis => """
+    These attributes apply to an individual Axis in a Subplot (for example the `subplot[:xaxis]`)
+    !!! info
+        All axis attributes in the table below can be passed with the listed names.
+        In that case they apply for all axis.
+        To only modify a specific axis one of the letters `x`, `y` or `z` can be prepended to the attribute name.
+        For example `xlims = (0, 1)` only sets the x axis limits to `(0, 1)` while `lims = (0, 1)` limits all axes. 
+    """,
 )
 
 const ATTRIBUTE_DEFAULTS = Dict(
